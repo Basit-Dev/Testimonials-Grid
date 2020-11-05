@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 * {
   margin: 0;
@@ -23,17 +25,24 @@ main {
   max-width: 1000px;
   overflow: hidden;
 }
+/* END OF GLOBAL */
+
+/* GRID CONTAINER */
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
   margin: 2rem;
 }
-section {
+/* END OF GRID CONTAINER */
+
+/* HERO CARDS */
+.hero_card {
   background: white;
   border-radius: 10px;
   padding: 2rem;
   letter-spacing: 0.6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .top_left {
   position: relative;
@@ -44,7 +53,6 @@ section {
 }
 .top_left .block_image {
   position: absolute;
-  display: block;
   top: 0;
   left: 60%;
 }
@@ -70,31 +78,36 @@ section {
   color: white;
   background: hsl(219, 29%, 14%);
 }
-.user_info h2 {
+/* END OF HERO CARDS */
+
+/* USER INFO CONTAINER */
+.user_info_container {
+  display: flex;
+  align-items: center;
+}
+.user_info_container h2 {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.3rem;
   letter-spacing: -0.1px;
 }
-.user_info h3 {
+.user_info_container h3 {
   font-size: 0.8rem;
   font-weight: 500;
   opacity: 50%;
   letter-spacing: -0.1px;
 }
-.user_info {
-  display: flex;
-  align-items: center;
-}
-.user_info img {
+.user_info_container img {
   width: 30px;
   border-radius: 50%;
   border: solid 1pt hsl(263, 91%, 70%);
-  /* float: left; */
   margin-right: 1rem;
 }
+/* END OF USER INFO CONTAINER */
+
+/* ARTICLE */
 article h1 {
-  /* clear: both; */
+  position: relative;
   font-size: 1.3rem;
   font-weight: 600;
   margin: 1rem 0;
@@ -107,12 +120,19 @@ article p {
   line-height: 1.4;
   letter-spacing: -0.1px;
 }
+/* END OF ARTICLE */
+
+/* FOOTER */
 footer {
   text-align: center;
   margin: 3rem 0;
   font-size: 1rem;
 }
+/* END OF FOOTER */
+
+/* MOBILE */
 @media only screen and (max-width: 1150px) {
+  /* GLOBAL */
   main {
     overflow: auto;
     position: relative;
@@ -122,6 +142,9 @@ footer {
     max-width: 500px;
     margin: auto;
   }
+  /* END OF GLOBAL */
+
+  /* HERO CARDS */
   .top_left {
     grid-column: 1/5;
     grid-row: 1/2;
@@ -145,4 +168,6 @@ footer {
     grid-column: 1/5;
     grid-row: 5/6;
   }
+  /* END OF HERO CARDS */
 }
+/* END OF MOBILE */
